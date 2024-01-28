@@ -67,13 +67,13 @@ public class PersonController {
     }
 
     @PostMapping("/getAll")
-    public ResponseEntity<Object> findAllPerson(@RequestBody String query){
+    public ResponseEntity<Object> findAllPerson(@RequestBody String query) {
         ExecutionResult result = graphQL.execute(query);
         return new ResponseEntity<Object>(result, HttpStatus.OK);
     }
 
     @PostMapping("/getPersonByEmail")
-    public ResponseEntity<Object> getPersonByEmail(@RequestBody String query){
+    public ResponseEntity<Object> getPersonByEmail(@RequestBody String query) {
         ExecutionResult result = graphQL.execute(query);
         return new ResponseEntity<Object>(result, HttpStatus.OK);
     }
