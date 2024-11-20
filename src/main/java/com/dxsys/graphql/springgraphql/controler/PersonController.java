@@ -78,4 +78,9 @@ public class PersonController {
         return new ResponseEntity<Object>(result, HttpStatus.OK);
     }
 
+    @GetMapping("/healthcheck")
+    public ResponseEntity<String> healthcheck(){
+        return new ResponseEntity<String>("Service is up and running", HttpStatus.OK);
+    }
+
 }
